@@ -13,7 +13,7 @@ const CategorySec = () => {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="text-2xl md:text-3xl lg:text-4xl font-bold text-center"
+        className="text-2xl md:text-3xl lg:text-4xl font-bold text-center my-5"
       >
         التصنيفات
       </motion.h1>
@@ -22,6 +22,7 @@ const CategorySec = () => {
           modules={[Navigation]}
           spaceBetween={10}
           slidesPerView={2}
+          loop={true}
           navigation={{
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
