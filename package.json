@@ -16,12 +16,13 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^5.4.0",
     "react-router-dom": "^7.1.1",
-    "swiper": "^11.2.0"
+    "swiper": "^11.2.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
+    "@types/swiper": "^5.4.3",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.17.0",
