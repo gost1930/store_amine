@@ -1,9 +1,15 @@
-import { FaBarsStaggered } from "react-icons/fa6";
-import { motion } from "framer-motion";
-import { Inputs } from "../../components";
-import { MdSearch } from "react-icons/md";
+// hooks
 import { useState } from "react";
+// framer motion
+import { motion } from "framer-motion";
+// cmponent
+import { Inputs } from "../../components";
+// icons
+import { FaBarsStaggered } from "react-icons/fa6";
+import { CiShoppingCart } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
+import { MdSearch } from "react-icons/md";
+// router
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
@@ -31,8 +37,8 @@ const NavBar = () => {
     },
   };
   const handleNav = () => {
-    !isOpen && window.scrollTo(0, 0)
-    setIsOpen(!isOpen)
+    !isOpen && window.scrollTo(0, 0);
+    setIsOpen(!isOpen);
   };
   const links: string[] = [
     "الصفحة الرئيسية",
@@ -47,7 +53,7 @@ const NavBar = () => {
         initial={"hidden"}
         animate={"visible"}
         exit={"hidden"}
-        className=" fixed top-0 left-0 flex flex-row items-center gap-x-7 w-full px-20 shadow-lg py-5 bg-white z-50"
+        className=" fixed top-0 left-0 flex flex-row items-center gap-x-7 w-full px-14 shadow-lg py-5 bg-white z-50"
       >
         <FaBarsStaggered
           size={30}
@@ -69,6 +75,13 @@ const NavBar = () => {
             />
           </div>
         </motion.div>
+        {/* cart */}
+        <div className="relative">
+          <CiShoppingCart size={30} className="cursor-pointer" />
+          <span className="absolute -top-2 -right-2 text-white bg-red-500 rounded-full w-5 h-5 flex items-center justify-center text-sm">
+            0
+          </span>
+        </div>
       </motion.div>
       {isOpen && (
         <motion.div

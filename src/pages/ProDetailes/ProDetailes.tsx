@@ -170,7 +170,7 @@ const ProDetailes = () => {
           </h1>
 
           {/* colors container */}
-          <div className="grid grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 place-content-start lg:grid-cols-5 gap-4">
             {/* color */}
             {colors.map((color, index) => (
               <div key={index} className="flex flex-row-reverse gap-x-1">
