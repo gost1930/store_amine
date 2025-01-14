@@ -89,12 +89,12 @@ const NavBar = () => {
           </div>
         </motion.div>
         {/* cart */}
-        <div className="relative">
+        <Link to="/cart" className="relative">
           <CiShoppingCart size={30} className="cursor-pointer" />
           <span className="absolute -top-2 -right-2 text-white bg-red-500 rounded-full w-5 h-5 flex items-center justify-center text-sm">
             0
           </span>
-        </div>
+        </Link>
       </motion.div>
       {isOpen && (
         <motion.div
