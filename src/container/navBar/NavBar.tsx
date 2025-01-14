@@ -1,5 +1,5 @@
 // hooks
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // framer motion
 import { motion } from "framer-motion";
 // cmponent
@@ -11,6 +11,7 @@ import { IoMdClose } from "react-icons/io";
 import { MdSearch } from "react-icons/md";
 // router
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,12 +41,24 @@ const NavBar = () => {
     !isOpen && window.scrollTo(0, 0);
     setIsOpen(!isOpen);
   };
-  const links: string[] = [
-    "الصفحة الرئيسية",
-    "الفئات",
-    "أسعار التوصيل",
-    "تواصل معنا",
+  interface LinksProps {
+    name: string;
+    path: string;
+  }
+  const links: LinksProps[] = [
+    // "الصفحة الرئيسية",
+    // "الفئات",
+    // ,
+    // "تواصل معنا",
+    { name: "الصفحة الرئيسية", path: "" },
+    { name: "أسعار التوصيل", path: "delevery_prices" },
+    { name: "تواصل معنا", path: "contact" },
   ];
+  const { pathname } = useLocation();
+  // this logic for close the navBar i we click in any link
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
   return (
     <div>
       <motion.div
@@ -103,7 +116,7 @@ const NavBar = () => {
             />
           </div>
           {links.map((link, index) => (
-            <Link to={`/${link}`} key={index} className="w-full">
+            <Link to={`/${link.path}`} key={index} className="w-full">
               <motion.div
                 className="text-xl font-semibold py-2 px-3
                 my-1 rounded hover:bg-gray-200 
@@ -111,7 +124,7 @@ const NavBar = () => {
                 "
                 whileHover={{ translateX: -10 }}
               >
-                {link}
+                {link.name}
               </motion.div>
             </Link>
           ))}

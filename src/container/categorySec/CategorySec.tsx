@@ -24,8 +24,8 @@ const CategorySec = () => {
           slidesPerView={2}
           loop={true}
           navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: "#button-next",
+            prevEl: "#button-prev",
           }}
           breakpoints={{
             640: {
@@ -70,10 +70,10 @@ const CategorySec = () => {
         </Swiper>
 
         {/* Navigation Buttons */}
-        <button className="custom-next absolute top-1/2 left-3 transform -translate-y-1/2 z-10 bg-gray-600/50 hover:bg-gray-600/80 text-white px-4 aspect-square rounded-full shadow-lg hover:bg-blue-500">
+        <button id="button-next" className="absolute top-1/2 left-3 transform -translate-y-1/2 z-10 bg-gray-600/50 hover:bg-gray-600/80 text-white px-4 aspect-square rounded-full shadow-lg hover:bg-blue-500">
           &#10095;{/* Left arrow icon */}
         </button>
-        <button className="custom-prev absolute top-1/2 right-3 transform -translate-y-1/2 z-10 bg-gray-600/50 hover:bg-gray-600/80 text-white px-4 aspect-square rounded-full shadow-lg hover:bg-blue-500">
+        <button id="button-prev" className="absolute top-1/2 right-3 transform -translate-y-1/2 z-10 bg-gray-600/50 hover:bg-gray-600/80 text-white px-4 aspect-square rounded-full shadow-lg hover:bg-blue-500">
           &#10094;{/* Right arrow icon */}
         </button>
       </div>
