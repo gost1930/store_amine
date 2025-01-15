@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Form = ({}) => {
   const [city, setCity] = useState<string[]>([]);
@@ -10,6 +10,9 @@ const Form = ({}) => {
       setCity([]);
     }
   };
+  useEffect(() => {
+    getCityByWilaya("Adrar");
+  } , []);
   // wilaya
   const wilaya = [
     {
@@ -145,7 +148,7 @@ const Form = ({}) => {
       </div>
 
       {/* order type (home or descktop) */}
-      <div className="grid grid-cols-3 my-2">
+      <div className="flex gap-x-4 my-5">
         <div className="flex items-center gap-x-3">
           <div className="checkbox-wrapper-12">
             <div className="cbx">

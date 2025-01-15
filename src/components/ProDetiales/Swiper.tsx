@@ -20,6 +20,7 @@ const SwiperPro : React.FC<Props> = ({customNavigationButtons = true , classname
         direction="horizontal"
         loop={true}
         autoplay={{ delay: 1000 }}
+        // auto looping
         pagination={{
           clickable: true,
           el: ".custom-pagination",

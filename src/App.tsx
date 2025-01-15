@@ -7,7 +7,7 @@ const App = () => {
     <div dir="rtl" style={{ paddingTop: "50px", overflow: "hidden" }}>
       <Router>
         <NavBar />
-        <div className="my-10">
+        <div className="my-14">
           <ScrollToTop />
             <Routes>
             <Route path="/" element={<Home />} />
