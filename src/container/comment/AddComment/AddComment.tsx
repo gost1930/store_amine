@@ -2,7 +2,7 @@
 // components
 import { Inputs, Modal } from "../../../components";
 // icons
-import { RiStarSFill, RiStarSLine } from "react-icons/ri";
+import { RiStarSFill } from "react-icons/ri";
 
 interface Props {
   isOpen: boolean;
@@ -42,9 +42,9 @@ const AddComment: React.FC<Props> = ({ isOpen, onClose }) => {
               <>
                 <RiStarSFill
                   key={index}
-                  className="text-2xl text-amber-500 cursor-pointer border"
+                  className="text-2xl text-amber-500 cursor-pointer"
                 />
-                <RiStarSLine />
+                {/* <RiStarSLine /> */}
               </>
             ))}
           </div>

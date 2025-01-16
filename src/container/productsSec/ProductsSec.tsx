@@ -1,7 +1,7 @@
 // framer motion
 import { motion } from "framer-motion";
 // components
-import { SwiperPro } from "../../components";
+import { PagesTitle, SwiperPro } from "../../components";
 import { Link } from "react-router-dom";
 import { FaCartShopping, FaEye } from "react-icons/fa6";
 const ProductsSec = () => {
@@ -34,9 +34,7 @@ const ProductsSec = () => {
       variants={motionProp}
       className="w-full h-full my-10"
     >
-      <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">
-        منتجات
-      </h1>
+      <PagesTitle title="_المنتجات:" discription="لدينا كل المنتجات التي تحتاجها😁:" />
       {/* the products */}
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-1 md:gap-x-5 lg:gap-x-7 gap-y-3 p-2 md:p-5">
         {Array.from({ length: 20 }).map((_, index) => (

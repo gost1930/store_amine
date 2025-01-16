@@ -46,12 +46,9 @@ const NavBar = () => {
     path: string;
   }
   const links: LinksProps[] = [
-    // "الصفحة الرئيسية",
-    // "الفئات",
-    // ,
-    // "تواصل معنا",
     { name: "الصفحة الرئيسية", path: "" },
-    { name: "أسعار التوصيل", path: "delevery_prices" },
+    { name: "أسعار التوصيل", path: "delivery_prices" },
+    { name: "حالة الطلب", path: "order_status" },
     { name: "تواصل معنا", path: "contact" },
   ];
   const { pathname } = useLocation();
