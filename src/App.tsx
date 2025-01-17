@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home, ProDetailes , Contact , Cart , DelivetyPrices ,OrderStatus } from "./pages";
+import { Home, ProDetailes , Contact , Cart , DelivetyPrices , OrderStatus , ProductsDiscount } from "./pages";
 import { Footer, NavBar } from "./container";
 import {LodingPage} from "./components"
 import ScrollToTop from "./utils/ScrollToTop";
@@ -19,6 +19,7 @@ const App = () => {
             <Route path="/delivery_prices" element={<DelivetyPrices />} />
             <Route path="/order_status" element={<OrderStatus />} />
             <Route path="*" element={<LodingPage />} />
+            <Route path="/products_discount" element={<ProductsDiscount />} />
           </Routes>
         </div>
         <Footer />

@@ -47,6 +47,7 @@ const NavBar = () => {
   }
   const links: LinksProps[] = [
     { name: "الصفحة الرئيسية", path: "" },
+    { name: "التخفيضات", path: "products_discount" },
     { name: "أسعار التوصيل", path: "delivery_prices" },
     { name: "حالة الطلب", path: "order_status" },
     { name: "تواصل معنا", path: "contact" },
