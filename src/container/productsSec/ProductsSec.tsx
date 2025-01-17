@@ -34,9 +34,12 @@ const ProductsSec = () => {
       variants={motionProp}
       className="w-full h-full my-10"
     >
-      <PagesTitle title="_المنتجات:" discription="لدينا كل المنتجات التي تحتاجها😁:" />
+      <PagesTitle
+        title="_المنتجات:"
+        discription="لدينا كل المنتجات التي تحتاجها😁:"
+      />
       {/* the products */}
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-1 md:gap-x-5 lg:gap-x-7 gap-y-3 p-2 md:p-5">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-1 md:gap-x-5 lg:gap-x-7 gap-y-3 p-2 md:p-5">
         {Array.from({ length: 20 }).map((_, index) => (
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -69,7 +72,7 @@ const ProductsSec = () => {
                   to="/pro_detailes"
                   className="group-hover:bg-black group-hover:text-white px-10 py-2 rounded-lg text-center md:translate-y-32 md:group-hover:translate-y-8 duration-300 border"
                 >
-                  اطلب
+                  أطلب الآن
                 </Link>
               </div>
               <div className="absolute top-1 right-1 bg-red-500 rounded-full w-10 h-10 aspect-square z-40 text-white grid place-content-center">

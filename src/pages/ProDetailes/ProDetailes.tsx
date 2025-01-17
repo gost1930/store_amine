@@ -73,7 +73,7 @@ const ProDetailes = () => {
         <div className="w-full md:w-[60%] flex flex-col gap-4 px-4">
           <div className="flex items-center gap-x-5">
             {/* discpunt percentage */}
-            <div className="text-center pt-2 h-11 w-11 aspect-square bg-red-600 rounded-full text-white animate-bounce">
+            <div className="text-center h-11 w-11 aspect-square bg-red-600 rounded-full text-white animate-bounce grid place-content-center">
               29%
             </div>
             <span className="ml-5 text-xl text-zinc-800">اللخر ميلحقش 😁</span>
